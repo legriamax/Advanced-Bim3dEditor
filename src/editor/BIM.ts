@@ -15,4 +15,17 @@ export default class BIM {
     /** 管理 */
     static readonly MGR: Imgr = new Imgr();
     /** 全局服务容器 */
-    static readonly SC: ServiceCo
+    static readonly SC: ServiceContainer = new ServiceContainer();
+    /** 全局事件派发 */
+    static readonly ED: EventDispatcher = new EventDispatcher();;
+
+    startUp(): void {
+        console.log('BIM start up.')
+        // 初始化服务
+        Service.init();
+        // 初始化键盘管理
+        KeyBoardManager.init();
+        // 启动管理器
+        BIM.MGR.startUp();
+        // 添加窗口尺寸变化监听
+        window.addEventLis

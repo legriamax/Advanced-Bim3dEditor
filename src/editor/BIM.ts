@@ -45,4 +45,10 @@ export default class BIM {
     }
 
     /** 窗口尺寸变化 */
-    onWindowResize(): 
+    onWindowResize(): void {
+        console.log('windows resize');
+        BIM.MGR.scene.onResize();
+    }
+
+
+}

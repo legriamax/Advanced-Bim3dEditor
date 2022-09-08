@@ -28,4 +28,21 @@ export default class BIM {
         // 启动管理器
         BIM.MGR.startUp();
         // 添加窗口尺寸变化监听
-        window.addEventLis
+        window.addEventListener('resize', () => this.onWindowResize());
+        // 启动帧循环
+        this.startRenderLoop();
+    }
+
+    exit(): void {
+        console.log('BIM exit.')
+    }
+
+    startRenderLoop(): void {
+        // 渲染
+        BIM.MGR.render.render();
+        // 动画帧
+        requestAnimationFrame(() => this.startRenderLoop());
+    }
+
+    /** 窗口尺寸变化 */
+    onWindowResize(): 

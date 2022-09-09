@@ -10,4 +10,17 @@ import { MOUSE, OrthographicCamera, PerspectiveCamera, Quaternion, Vector2, Vect
  * @author songmy
  * @since 2022/2/25
  */
-export default
+export default class TrackCameraCtrl implements IDispose {
+
+    public camera: any;
+    public domElement: any
+    public enabled: boolean;
+    public screen: any;
+    public rotateSpeed: number;
+    public zoomSpeed: number;
+    public panSpeed: number;
+    public noRotate: boolean;
+    public noZoom: boolean;
+    public noPan: boolean;
+    public staticMoving: boolean;
+    public dyn

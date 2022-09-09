@@ -23,4 +23,17 @@ export default class TrackCameraCtrl implements IDispose {
     public noZoom: boolean;
     public noPan: boolean;
     public staticMoving: boolean;
-    public dyn
+    public dynamicDampingFactor: number;
+    public minDistance: number;
+    public maxDistance: number;
+    public keys: any
+    public mouseButtons: any;
+    public target: Vector3;
+    public target0: Vector3;
+    public position0: Vector3;
+    public up0: Vector3;
+    public zoom0: number;
+    public lastZoom: number;
+    public EPS: Number;
+    public lastPosition: Vector3;
+    private _ey

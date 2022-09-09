@@ -36,4 +36,15 @@ export default class TrackCameraCtrl implements IDispose {
     public lastZoom: number;
     public EPS: Number;
     public lastPosition: Vector3;
-    private _ey
+    private _eye: Vector3;
+    private _movePrev: Vector2;
+    private _moveCurr: Vector2;
+    private _lastAxis: Vector3;
+    private _zoomStart: Vector2
+    private _zoomEnd: Vector2
+    private _panStart: Vector2
+    private _panEnd: Vector2
+    private _pointers: any[]
+    private _pointerPositions: any;
+    private _state: number;
+    private _touchZoomDistanceStart: numb

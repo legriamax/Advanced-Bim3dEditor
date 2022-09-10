@@ -59,4 +59,16 @@ export default class TrackCameraCtrl implements IDispose {
     private _rendDom: any;
     private _meshCenter: Vector3;
 
-    constructor(camera: any, domElement: a
+    constructor(camera: any, domElement: any, renderDom: any) {
+
+        if (domElement === undefined) {
+            console.warn('TrackCameraCtrl: domElement is undefined.');
+        }
+        if (domElement === document) {
+            console.error('TrackCameraCtrl: Please use "renderer.domElement" instead.');
+        }
+        this._rendDom = renderDom;
+
+        this.camera = camera;
+        this.domElement = domElement;
+        // 禁用触

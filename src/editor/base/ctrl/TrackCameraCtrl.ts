@@ -71,4 +71,21 @@ export default class TrackCameraCtrl implements IDispose {
 
         this.camera = camera;
         this.domElement = domElement;
-        // 禁用触
+        // 禁用触摸滚动
+        this.domElement.style.touchAction = 'none';
+
+        this.enabled = true;
+
+        // 设置屏幕的位置和偏移
+        this.screen = {
+            left: 0,
+            top: 0,
+            width: 0,
+            height: 0
+        };
+        // 移动鼠标时场景旋转的速度
+        this.rotateSpeed = 3;
+        // 鼠标滚轮放大缩小的速度
+        this.zoomSpeed = 3;
+        // 上下左右移动的速度
+        this.panSpe

@@ -47,4 +47,16 @@ export default class TrackCameraCtrl implements IDispose {
     private _pointers: any[]
     private _pointerPositions: any;
     private _state: number;
-    private _touchZoomDistanceStart: numb
+    private _touchZoomDistanceStart: number;
+    private _touchZoomDistanceEnd: number;
+    private _lastAngle: number;
+    private context_menu: any;
+    private pointer_down: any;
+    private pointer_move: any;
+    private pointer_up: any;
+    private pointer_cancel: any;
+    private mouse_wheel: any;
+    private _rendDom: any;
+    private _meshCenter: Vector3;
+
+    constructor(camera: any, domElement: a

@@ -88,4 +88,16 @@ export default class TrackCameraCtrl implements IDispose {
         // 鼠标滚轮放大缩小的速度
         this.zoomSpeed = 3;
         // 上下左右移动的速度
-        this.panSpe
+        this.panSpeed = 2.5;
+        // 控制旋转、缩放、平移
+        this.noRotate = false;
+        this.noZoom = false;
+        this.noPan = false;
+        this.staticMoving = true;
+        // 阻尼系数；旋转时候的阻力
+        this.dynamicDampingFactor = 20;
+        // 表示相机距离物体的最小距离和最大距离
+        this.minDistance = 500;
+        this.maxDistance = 500000;
+
+        this.mouseButtons = {

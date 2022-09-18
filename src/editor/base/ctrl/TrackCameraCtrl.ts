@@ -113,4 +113,20 @@ export default class TrackCameraCtrl implements IDispose {
         this.lastZoom = 1;
         this._lastAngle = 0;
 
-        this._state = TC
+        this._state = TCState.NONE;
+
+        this._touchZoomDistanceStart = 0;
+        this._touchZoomDistanceEnd = 0;
+
+
+        this._eye = new Vector3();
+
+        this._movePrev = new Vector2();
+        this._moveCurr = new Vector2();
+
+        this._lastAxis = new Vector3();
+
+        this._zoomStart = new Vector2();
+        this._zoomEnd = new Vector2();
+
+        this._panStart =

@@ -129,4 +129,16 @@ export default class TrackCameraCtrl implements IDispose {
         this._zoomStart = new Vector2();
         this._zoomEnd = new Vector2();
 
-        this._panStart =
+        this._panStart = new Vector2();
+        this._panEnd = new Vector2();
+
+        this._pointers = [];
+        this._pointerPositions = {};
+
+        // 保存相机的最初始状态
+        this.target0 = this.target.clone();
+        // 相机的当前位置
+        this.position0 = this.camera.position.clone();
+        // 相机的上方向
+        this.up0 = this.camera.up.clone();
+        this.zoom0 = this.camera.z

@@ -101,3 +101,16 @@ export default class TrackCameraCtrl implements IDispose {
         this.maxDistance = 500000;
 
         this.mouseButtons = {
+            LEFT: MOUSE.ROTATE,
+            MIDDLE: MOUSE.DOLLY,
+            RIGHT: MOUSE.PAN
+        };
+        // internals 这些私有变量用来追踪相机状态
+        this.target = new Vector3(0, 1500, 0);
+        this.EPS = 0.000001;
+        // 相机上次的位置
+        this.lastPosition = new Vector3();
+        this.lastZoom = 1;
+        this._lastAngle = 0;
+
+        this._state = TC

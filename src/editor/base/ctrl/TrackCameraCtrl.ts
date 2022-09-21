@@ -158,4 +158,17 @@ export default class TrackCameraCtrl implements IDispose {
         this.mouseButtons = null;
         this.target = null;
         this.lastPosition = null;
-        this._eye = nul
+        this._eye = null;
+        this._movePrev = null;
+        this._moveCurr = null;
+        this._lastAxis = null;
+        this._zoomStart = null;
+        this._zoomEnd = null;
+        this._panStart = null;
+        this._panEnd = null;
+        this._pointers = null;
+        this._pointerPositions = null;
+        this.target0 = null;
+        this.position0 = null;
+        this.up0 = null;
+        this.conte

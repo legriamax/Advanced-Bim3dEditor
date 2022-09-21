@@ -141,4 +141,21 @@ export default class TrackCameraCtrl implements IDispose {
         this.position0 = this.camera.position.clone();
         // 相机的上方向
         this.up0 = this.camera.up.clone();
-        this.zoom0 = this.camera.z
+        this.zoom0 = this.camera.zoom;
+
+        this.addEve();
+        this.handleResize();
+
+        // 开始时，强制更新
+        this.update();
+    }
+
+    clearData(): void {
+        this._rendDom = null;
+        this.camera = null;
+        this.domElement = null;
+        this.screen = null;
+        this.mouseButtons = null;
+        this.target = null;
+        this.lastPosition = null;
+        this._eye = nul

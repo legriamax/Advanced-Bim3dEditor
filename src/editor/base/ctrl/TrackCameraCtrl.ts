@@ -171,4 +171,19 @@ export default class TrackCameraCtrl implements IDispose {
         this.target0 = null;
         this.position0 = null;
         this.up0 = null;
-        this.conte
+        this.context_menu = null;
+        this.pointer_down = null;
+        this.pointer_move = null;
+        this.pointer_up = null;
+        this.pointer_cancel = null;
+        this.mouse_wheel = null;
+    }
+
+    dispose(): void {
+        this.removeEve();
+        this.clearData();
+    };
+
+    private addEve(): void {
+        console.log("track add eve")
+        this.context_menu = (event: any) =

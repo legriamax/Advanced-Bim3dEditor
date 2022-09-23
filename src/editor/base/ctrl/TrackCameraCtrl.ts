@@ -186,4 +186,16 @@ export default class TrackCameraCtrl implements IDispose {
 
     private addEve(): void {
         console.log("track add eve")
-        this.context_menu = (event: any) =
+        this.context_menu = (event: any) => {
+            this.contextmenu(event);
+        }
+        this.pointer_down = (event: any) => {
+            this.onPointerDown(event);
+        }
+        this.pointer_move = (event: any) => {
+            this.onPointerMove(event);
+        }
+        this.pointer_up = (event: any) => {
+            this.onPointerUp(event);
+        }
+        this.pointer_cancel = (event: any

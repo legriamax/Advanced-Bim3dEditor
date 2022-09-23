@@ -198,4 +198,14 @@ export default class TrackCameraCtrl implements IDispose {
         this.pointer_up = (event: any) => {
             this.onPointerUp(event);
         }
-        this.pointer_cancel = (event: any
+        this.pointer_cancel = (event: any) => {
+            this.onPointerCancel(event);
+        }
+        this.mouse_wheel = (event: any) => {
+            this.onMouseWheel(event);
+        }
+
+        this.domElement.addEventListener('contextmenu', this.context_menu);
+        this.domElement.addEventListener('pointerdown', this.pointer_down);
+        this.domElement.addEventListener('pointercancel', this.pointer_cancel);
+        this.domElement.addEventListener('whe

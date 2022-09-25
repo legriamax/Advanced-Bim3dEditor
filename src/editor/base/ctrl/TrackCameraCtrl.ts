@@ -208,4 +208,14 @@ export default class TrackCameraCtrl implements IDispose {
         this.domElement.addEventListener('contextmenu', this.context_menu);
         this.domElement.addEventListener('pointerdown', this.pointer_down);
         this.domElement.addEventListener('pointercancel', this.pointer_cancel);
-        this.domElement.addEventListener('whe
+        this.domElement.addEventListener('wheel', this.mouse_wheel, {
+            passive: false
+        });
+        // BIM.ED.on(Event.KEY_DOWN, this, this.keydown);
+        // BIM.ED.on(Event.KEY_UP, this, this.keyup);
+
+        // BIM.ED.on(EventDef.MESH_CENTER_CHANGE, this, this.onMeshCenterChange);
+    }
+
+    private removeEve(): void {
+        this.domElement.removeEventListener('contextmenu', this.conte

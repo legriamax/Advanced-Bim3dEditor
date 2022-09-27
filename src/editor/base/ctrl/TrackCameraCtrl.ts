@@ -218,4 +218,9 @@ export default class TrackCameraCtrl implements IDispose {
     }
 
     private removeEve(): void {
-        this.domElement.removeEventListener('contextmenu', this.conte
+        this.domElement.removeEventListener('contextmenu', this.context_menu);
+        this.domElement.removeEventListener('pointerdown', this.pointer_down);
+        this.domElement.removeEventListener('pointercancel', this.pointer_cancel);
+        this.domElement.removeEventListener('wheel', this.mouse_wheel);
+        this.domElement.removeEventListener('pointermove', this.pointer_move);
+        this.domElement.re

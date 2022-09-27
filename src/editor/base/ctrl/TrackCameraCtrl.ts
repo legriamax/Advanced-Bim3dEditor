@@ -230,4 +230,17 @@ export default class TrackCameraCtrl implements IDispose {
     }
 
     // private onMeshCenterChange(center: Vector3): void {
-    //     this._meshCenter =
+    //     this._meshCenter = center;
+    //     BIM.ED.event(EventDef.CAMERA_TARGET_CHANGE, center);
+    // }
+
+    private handleResize(): void {
+        this.screen.left = 0;
+        this.screen.top = 0;
+        this.screen.width = window.innerWidth;
+        this.screen.height = window.innerHeight;
+    }
+
+    private getMouseOnScreen(pageX: number, pageY: number): Vector2 {
+        let vector = new Vector2();
+     

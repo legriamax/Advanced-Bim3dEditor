@@ -243,4 +243,13 @@ export default class TrackCameraCtrl implements IDispose {
 
     private getMouseOnScreen(pageX: number, pageY: number): Vector2 {
         let vector = new Vector2();
-     
+        //  将鼠标坐标转换成0-1，左上角为0，0右下角为1，1
+        let x = (pageX - this.screen.left) / this.screen.width;
+        let y = (pageY - this.screen.top) / this.screen.height;
+        vector.set(x, y);
+        return vector;
+    }
+
+    private getMouseOnCircle(pageX: number, pageY: number): Vector2 {
+        let vector = new Vector2();
+        // 将鼠标位置转换为圆坐标, 由于屏幕宽高未

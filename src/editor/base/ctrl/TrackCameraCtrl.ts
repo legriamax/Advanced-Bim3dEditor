@@ -252,4 +252,15 @@ export default class TrackCameraCtrl implements IDispose {
 
     private getMouseOnCircle(pageX: number, pageY: number): Vector2 {
         let vector = new Vector2();
-        // 将鼠标位置转换为圆坐标, 由于屏幕宽高未
+        // 将鼠标位置转换为圆坐标, 由于屏幕宽高未必一致，这里以宽度一半作为半径
+        let x = (pageX - this.screen.width * 0.5 - this.screen.left) / (this.screen.width * 0.5);
+        let y = (this.screen.height + 2 * (this.screen.top - pageY)) / this.screen.width;
+        vector.set(x, y);
+        return vector;
+    }
+
+    private _isRY: boolean = true;
+    /**
+     * 旋转实际相当于将手势在相机屏幕上的移动转化为在一个以焦点为圆心的球上的转动
+     * moveDiection就是我们要将相机eye向量的旋转方向
+  

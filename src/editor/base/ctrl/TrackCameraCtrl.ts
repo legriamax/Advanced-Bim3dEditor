@@ -273,4 +273,13 @@ export default class TrackCameraCtrl implements IDispose {
         let objectSidewaysDirection = new Vector3();
         let moveDirection = new Vector3();
 
-        //  moveDirection表示以相机屏幕中心点为圆心，在相
+        //  moveDirection表示以相机屏幕中心点为圆心，在相机屏幕上的一个向量
+        moveDirection.set(this._moveCurr.x - this._movePrev.x, this._moveCurr.y - this._movePrev.y, 0);
+
+        let angle = moveDirection.length();
+        // 判断是否有旋转
+        if (angle) {
+            // 计算角度
+            let div = this._moveCurr.clone().sub(this._movePrev.clone());
+            let ag = div.angle();
+            this._isRY = (ag > Math.PI * 0.25 && ag < Mat

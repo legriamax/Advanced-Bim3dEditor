@@ -263,4 +263,14 @@ export default class TrackCameraCtrl implements IDispose {
     /**
      * 旋转实际相当于将手势在相机屏幕上的移动转化为在一个以焦点为圆心的球上的转动
      * moveDiection就是我们要将相机eye向量的旋转方向
-  
+     * 3d中要将一个向量向另一个向量靠拢，最好使用四元数来做旋转
+     */
+    rotateCamera(): void {
+        let axis = new Vector3();
+        let quaternion = new Quaternion();
+        let eyeDirection = new Vector3();
+        let objectUpDirection = new Vector3();
+        let objectSidewaysDirection = new Vector3();
+        let moveDirection = new Vector3();
+
+        //  moveDirection表示以相机屏幕中心点为圆心，在相

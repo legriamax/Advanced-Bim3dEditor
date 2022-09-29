@@ -282,4 +282,13 @@ export default class TrackCameraCtrl implements IDispose {
             // 计算角度
             let div = this._moveCurr.clone().sub(this._movePrev.clone());
             let ag = div.angle();
-            this._isRY = (ag > Math.PI * 0.25 && ag < Mat
+            this._isRY = (ag > Math.PI * 0.25 && ag < Math.PI * 0.75) || (ag > Math.PI * 1.25 && ag < Math.PI * 1.75);
+
+            // 计算旋转
+            this._eye.copy(this.camera.position).sub(this.target);
+            // 相机视线轴
+            eyeDirection.copy(this._eye).normalize();
+            // 相机up轴
+            objectUpDirection.copy(this.camera.up).normalize();
+            // 相机x轴
+            objectSidewaysDirection.cr

@@ -291,4 +291,14 @@ export default class TrackCameraCtrl implements IDispose {
             // 相机up轴
             objectUpDirection.copy(this.camera.up).normalize();
             // 相机x轴
-            objectSidewaysDirection.cr
+            objectSidewaysDirection.crossVectors(objectUpDirection, eyeDirection).normalize();
+
+            if (this._isRY) {
+                objectSidewaysDirection.setLength(0);
+                // y轴移动距离
+                objectUpDirection.setLength(this._moveCurr.y - this._movePrev.y);
+            }
+            else {
+
+                // x轴移动距离
+                objectSidewaysDirection.setLength(this._moveCurr.x - thi

@@ -301,4 +301,15 @@ export default class TrackCameraCtrl implements IDispose {
             else {
 
                 // x轴移动距离
-                objectSidewaysDirection.setLength(this._moveCurr.x - thi
+                objectSidewaysDirection.setLength(this._moveCurr.x - this._movePrev.x);
+                objectUpDirection.setLength(0);
+            }
+
+            // moveDiection就是我们要将相机eye向量的旋转方向
+            moveDirection.copy(objectUpDirection.add(objectSidewaysDirection)); //计算出在相机屏幕的移动向量
+
+            // 3d中要将一个向量向另一个向量靠拢，最好使用四元数来做旋转
+            angle *= this.rotateSpeed; // 将相机屏幕移动距离转化为角度
+
+            if (this._isRY) {
+                // 计算出

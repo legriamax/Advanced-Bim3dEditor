@@ -312,4 +312,14 @@ export default class TrackCameraCtrl implements IDispose {
             angle *= this.rotateSpeed; // 将相机屏幕移动距离转化为角度
 
             if (this._isRY) {
-                // 计算出
+                // 计算出四元数的旋转轴
+                axis.crossVectors(moveDirection, this._eye).normalize();
+            }
+            else {
+
+                let up = this.camera.up.clone();
+                let x: Vector3 = new Vector3();
+                (up.y > 1 || up.y < -1) ? x.set(0, -1, 0) : x.set(0, 1, 0)
+                axis.copy(x);
+
+                angle = this._moveCurr.x - this._movePrev.x 

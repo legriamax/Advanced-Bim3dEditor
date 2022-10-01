@@ -322,4 +322,17 @@ export default class TrackCameraCtrl implements IDispose {
                 (up.y > 1 || up.y < -1) ? x.set(0, -1, 0) : x.set(0, 1, 0)
                 axis.copy(x);
 
-                angle = this._moveCurr.x - this._movePrev.x 
+                angle = this._moveCurr.x - this._movePrev.x > 0 ? -angle : angle;
+            }
+
+
+            quaternion.setFromAxisAngle(axis, angle);
+
+            // 对视线轴和相机up轴应用四元数旋转
+            // 对eye和up同时旋转保持二者相对位置关系
+            this._eye.applyQuaternion(quaternion);
+            this.camera.up.applyQuaternion(quaternion);
+
+            // 偏移下围绕物体旋转
+            if (this._meshCenter) {
+    

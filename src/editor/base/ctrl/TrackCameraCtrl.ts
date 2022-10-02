@@ -335,4 +335,15 @@ export default class TrackCameraCtrl implements IDispose {
 
             // 偏移下围绕物体旋转
             if (this._meshCenter) {
-    
+                this.target.sub(this._meshCenter).applyQuaternion(quaternion);
+                this.target.add(this._meshCenter);
+            }
+
+            this._lastAxis.copy(axis);
+            this._lastAngle = angle;
+        }
+        else if (!this.staticMoving && this._lastAngle) {
+
+            this._lastAngle *= Math.sqrt(1.0 - this.dynamicDampingFactor);
+
+            thi

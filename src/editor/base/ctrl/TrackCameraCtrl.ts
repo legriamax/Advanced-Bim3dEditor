@@ -346,4 +346,16 @@ export default class TrackCameraCtrl implements IDispose {
 
             this._lastAngle *= Math.sqrt(1.0 - this.dynamicDampingFactor);
 
-            thi
+            this._eye.copy(this.camera.position).sub(this.target);
+
+            quaternion.setFromAxisAngle(this._lastAxis, this._lastAngle);
+
+            this._eye.applyQuaternion(quaternion);
+
+            this.camera.up.applyQuaternion(quaternion);
+
+            // 偏移下围绕物体旋转
+            if (this._meshCenter) {
+
+                this.target.sub(this._meshCenter).applyQuaternion(quaternion);
+     

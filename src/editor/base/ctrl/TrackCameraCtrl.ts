@@ -382,4 +382,14 @@ export default class TrackCameraCtrl implements IDispose {
                 this.camera.updateProjectionMatrix();
             }
             else {
-                cons
+                console.warn('TrackCameraCtrl: undefine camera type');
+            }
+        }
+        else {
+            // 获取放到缩小的倍数，这个倍数不能小于0；
+            // 当倍数小于1时为缩小，当倍数大于1时为放大
+            factor = 1.0 + (this._zoomEnd.y - this._zoomStart.y) * this.zoomSpeed;
+
+            if (factor !== 1.0 && factor > 0.0) {
+                if (this.camera instanceof PerspectiveCamera) {
+                    this._e

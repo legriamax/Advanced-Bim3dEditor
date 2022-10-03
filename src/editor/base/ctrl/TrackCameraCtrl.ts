@@ -358,4 +358,18 @@ export default class TrackCameraCtrl implements IDispose {
             if (this._meshCenter) {
 
                 this.target.sub(this._meshCenter).applyQuaternion(quaternion);
-     
+                this.target.add(this._meshCenter);
+            }
+        }
+
+        this._movePrev.copy(this._moveCurr);
+    }
+
+    private zoomCamera(): void {
+
+        let factor: number;
+
+        if (this._state === TCState.TOUCH_ZOOM_PAN) {
+
+            factor = this._touchZoomDistanceStart / this._touchZoomDistanceEnd;
+            this._touchZoomDistanceStart = this._touch

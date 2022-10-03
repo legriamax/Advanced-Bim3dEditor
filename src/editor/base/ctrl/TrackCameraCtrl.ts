@@ -372,4 +372,14 @@ export default class TrackCameraCtrl implements IDispose {
         if (this._state === TCState.TOUCH_ZOOM_PAN) {
 
             factor = this._touchZoomDistanceStart / this._touchZoomDistanceEnd;
-            this._touchZoomDistanceStart = this._touch
+            this._touchZoomDistanceStart = this._touchZoomDistanceEnd;
+
+            if (this.camera instanceof PerspectiveCamera) {
+                this._eye.multiplyScalar(factor);
+            }
+            else if (this.camera instanceof OrthographicCamera) {
+                this.camera.zoom /= factor;
+                this.camera.updateProjectionMatrix();
+            }
+            else {
+                cons

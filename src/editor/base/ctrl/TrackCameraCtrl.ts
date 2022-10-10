@@ -392,4 +392,15 @@ export default class TrackCameraCtrl implements IDispose {
 
             if (factor !== 1.0 && factor > 0.0) {
                 if (this.camera instanceof PerspectiveCamera) {
-                    this._e
+                    this._eye.multiplyScalar(factor);
+                }
+                else if (this.camera instanceof OrthographicCamera) {
+                    this.camera.zoom /= factor;
+                    this.camera.updateProjectionMatrix();
+                }
+                else {
+                    console.warn('TrackCameraCtrl: undefine camera type');
+                }
+            }
+
+          

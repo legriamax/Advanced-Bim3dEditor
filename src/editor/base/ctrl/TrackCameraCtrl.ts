@@ -403,4 +403,15 @@ export default class TrackCameraCtrl implements IDispose {
                 }
             }
 
-          
+            if (this.staticMoving) {
+                this._zoomStart.copy(this._zoomEnd);
+            }
+            else {
+                // 做一个动画效果
+                this._zoomStart.y += (this._zoomEnd.y - this._zoomStart.y) * this.dynamicDampingFactor;
+            }
+        }
+
+
+        let xx = this._eye.length() / 165;
+        // BIM.ED.event(EventDef.SCENE_ZOOM_CHANGE, [xx * 5

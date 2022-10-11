@@ -424,4 +424,18 @@ export default class TrackCameraCtrl implements IDispose {
                 dir.x > 0 ? this.camera.up.set(1, 0, 0) :
                     dir.x < 0 ? this.camera.up.set(-1, 0, 0) :
                         dir.z > 0 ? this.camera.up.set(0, 0, 1) :
-                   
+                            dir.z < 0 && this.camera.up.set(0, 0, -1)
+    }
+
+    /**
+     * 移动相机
+     * @param type 0 左 1 右 2 上 3 下 4 前 5 后
+     */
+    private panCameraByKey(type: number = -1): void {
+
+        let pan = new Vector3();
+        let objectUp = new Vector3();
+        // let objectForward = new Vector3();
+        let mouseChange = new Vector3();
+
+        let speed: number = this._eye.l

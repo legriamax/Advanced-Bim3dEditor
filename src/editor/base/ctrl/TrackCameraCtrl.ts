@@ -414,4 +414,14 @@ export default class TrackCameraCtrl implements IDispose {
 
 
         let xx = this._eye.length() / 165;
-        // BIM.ED.event(EventDef.SCENE_ZOOM_CHANGE, [xx * 5
+        // BIM.ED.event(EventDef.SCENE_ZOOM_CHANGE, [xx * 5]);
+    };
+
+
+    adjustCameraUp(dir: Vector3) {
+        dir.y > 0 ? this.camera.up.set(0, 1, 0) :
+            dir.y < 0 ? this.camera.up.set(0, -1, 0) :
+                dir.x > 0 ? this.camera.up.set(1, 0, 0) :
+                    dir.x < 0 ? this.camera.up.set(-1, 0, 0) :
+                        dir.z > 0 ? this.camera.up.set(0, 0, 1) :
+                   

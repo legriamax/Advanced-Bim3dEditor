@@ -446,4 +446,16 @@ export default class TrackCameraCtrl implements IDispose {
 
         // 得出相机的right轴方向和up轴方向的移动距离
         // 注意这时候的用的坐标都是世界坐标
-        // let up = new Vector3(
+        // let up = new Vector3(0, 1, 0);
+
+
+        // 移动的距离跟相机距离物体的距离成正比
+        // 相机距离物体越远移动距离越多
+        // 但这样做的感觉并不是很好
+        // mouseChange.multiplyScalar(this._eye.length() * this.panSpeed);
+
+        // 得出相机的right轴方向和up轴方向的移动距离
+        // 注意这时候的用的坐标都是世界坐标
+        if (mouseChange.x !== 0) {
+            pan.copy(this._eye).cross(this.camera.up).setLength(mouseChange.x);
+  

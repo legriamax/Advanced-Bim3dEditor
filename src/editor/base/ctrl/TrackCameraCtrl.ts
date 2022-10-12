@@ -438,4 +438,12 @@ export default class TrackCameraCtrl implements IDispose {
         // let objectForward = new Vector3();
         let mouseChange = new Vector3();
 
-        let speed: number = this._eye.l
+        let speed: number = this._eye.length() * this.panSpeed * 0.01;
+
+        mouseChange.x = type === 0 ? speed : type === 1 ? -speed : 0;
+        mouseChange.y = type === 2 ? speed : type === 3 ? -speed : 0;
+        mouseChange.z = type === 4 ? speed : type === 5 ? -speed : 0;
+
+        // 得出相机的right轴方向和up轴方向的移动距离
+        // 注意这时候的用的坐标都是世界坐标
+        // let up = new Vector3(

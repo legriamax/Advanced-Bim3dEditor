@@ -475,4 +475,23 @@ export default class TrackCameraCtrl implements IDispose {
         // 这里保证无论怎么旋转场景，当鼠标做平移操作时，场景都是平行于屏幕上下移动的，而不是相对于他们自己的模型坐标系移动
         // this.camera.up.y < 0 ? this.camera.position.sub(pan):
         this.camera.position.add(pan);
-        //  如果焦点没有移动我们相当于一直在盯着一个
+        //  如果焦点没有移动我们相当于一直在盯着一个点看
+        this.target.add(pan);
+
+        this.update();
+    }
+
+    /**
+     * 移动相机
+     *
+     */
+    private panCamera(): void {
+
+        let mouseChange = new Vector2();
+        let objectUp = new Vector3();
+        let pan = new Vector3();
+        // 屏幕左上点为0，0右下点为1，1
+        // 这里得到鼠标移动的方向和距离 （二维向量）
+        mouseChange.copy(this._panEnd).sub(this._panStart);
+
+    

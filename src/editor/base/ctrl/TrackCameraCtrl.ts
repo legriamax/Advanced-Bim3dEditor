@@ -458,4 +458,13 @@ export default class TrackCameraCtrl implements IDispose {
         // 注意这时候的用的坐标都是世界坐标
         if (mouseChange.x !== 0) {
             pan.copy(this._eye).cross(this.camera.up).setLength(mouseChange.x);
-  
+        }
+        if (mouseChange.y !== 0) {
+            let up = new Vector3(0, 1, 0);
+            pan.add(objectUp.copy(up).setLength(mouseChange.y));
+        }
+        if (mouseChange.z !== 0) {
+
+            // let x = this.camera.position.y >= 0 ? -this._eye.x : this._eye.x;
+            // let z = this.camera.position.y >= 0 ? -this._eye.z : this._eye.z;
+            le

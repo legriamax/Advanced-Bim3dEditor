@@ -494,4 +494,9 @@ export default class TrackCameraCtrl implements IDispose {
         // 这里得到鼠标移动的方向和距离 （二维向量）
         mouseChange.copy(this._panEnd).sub(this._panStart);
 
-    
+        if (mouseChange.lengthSq()) {
+
+            if (this.camera instanceof OrthographicCamera) {
+                const scale_x = (this.camera.right - this.camera.left) / this.camera.zoom / this._rendDom.clientWidth;
+                const scale_y = (this.camera.top - this.camera.bottom) / this.camera.zoom / this._rendDom.clientHeight;
+                mouseChange.x *= scale_x*0.04;

@@ -511,4 +511,11 @@ export default class TrackCameraCtrl implements IDispose {
             // 得出相机的right轴方向和up轴方向的移动距离
             // 注意这时候的用的坐标都是世界坐标
             let up = new Vector3(0, 1, 0);
-            let x = this.camera.position
+            let x = this.camera.position.y >= 0 ? -this._eye.x : this._eye.x;
+            let z = this.camera.position.y >= 0 ? -this._eye.z : this._eye.z;
+            let front = new Vector3(x, 0, z);
+            pan.copy(this._eye).cross(up).setLength(mouseChange.x);
+            pan.add(objectUp.copy(front).setLength(mouseChange.y));
+
+            // 移动相机位置和聚焦点位置，保持eye向量不变
+            // 这里保证无论怎么旋转场景，当鼠标做平移操作时

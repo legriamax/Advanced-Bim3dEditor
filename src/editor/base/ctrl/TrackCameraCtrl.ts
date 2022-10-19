@@ -529,4 +529,16 @@ export default class TrackCameraCtrl implements IDispose {
             }
             else {
                 // 多次缓慢移动
-                this._panStart.add(mouse
+                this._panStart.add(mouseChange.subVectors(this._panEnd, this._panStart).multiplyScalar(this.dynamicDampingFactor));
+            }
+        }
+    };
+
+    /**
+     * 相机的可视范围的远近由近景面和远景面决定
+     * 如果相机无限缩小小于近景面或物体离着相机的距离大于远景面
+     * 那么相机将不会看到任何东西；所以有时候我们要控制相机的跟物体的距离
+     */
+    private checkDistances(): void {
+        if (!this.noZoom || !this.noPan) {
+            // 根据鼠标距

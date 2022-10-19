@@ -541,4 +541,10 @@ export default class TrackCameraCtrl implements IDispose {
      */
     private checkDistances(): void {
         if (!this.noZoom || !this.noPan) {
-            // 根据鼠标距
+            // 根据鼠标距离物体的最大最小距离来调整相机位置
+            if (this._eye.lengthSq() > this.maxDistance * this.maxDistance) {
+                this.camera.position.addVectors(this.target, this._eye.setLength(this.maxDistance));
+                this._zoomStart.copy(this._zoomEnd);
+            }
+
+            if (this._eye.lengthSq() < this.minDistance * this.minDist

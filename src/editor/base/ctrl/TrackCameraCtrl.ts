@@ -518,4 +518,15 @@ export default class TrackCameraCtrl implements IDispose {
             pan.add(objectUp.copy(front).setLength(mouseChange.y));
 
             // 移动相机位置和聚焦点位置，保持eye向量不变
-            // 这里保证无论怎么旋转场景，当鼠标做平移操作时
+            // 这里保证无论怎么旋转场景，当鼠标做平移操作时，场景都是平行于屏幕上下移动的，而不是相对于他们自己的模型坐标系移动
+            this.camera.position.add(pan);
+            //  如果焦点没有移动我们相当于一直在盯着一个点看
+            this.target.add(pan);
+
+            if (this.staticMoving) {
+                // 一次性移动
+                this._panStart.copy(this._panEnd);
+            }
+            else {
+                // 多次缓慢移动
+                this._panStart.add(mouse

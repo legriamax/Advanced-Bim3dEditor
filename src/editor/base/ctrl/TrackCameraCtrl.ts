@@ -547,4 +547,19 @@ export default class TrackCameraCtrl implements IDispose {
                 this._zoomStart.copy(this._zoomEnd);
             }
 
-            if (this._eye.lengthSq() < this.minDistance * this.minDist
+            if (this._eye.lengthSq() < this.minDistance * this.minDistance) {
+                this.camera.position.addVectors(this.target, this._eye.setLength(this.minDistance));
+                this._zoomStart.copy(this._zoomEnd);
+            }
+        }
+    };
+
+    /**
+     * 这个函数会不断的更新相机位置和方向来反映相机的变化
+     * 屏幕的内容也会跟着变化
+     */
+    update(): void {
+
+        // 计算目标点到相机点的距离
+        this._eye.subVectors(this.camera.position, this.target);
+    

@@ -587,4 +587,10 @@ export default class TrackCameraCtrl implements IDispose {
             // 当相机位置变化后，发送一个相机状态改变的事件
             if (this.lastPosition.distanceToSquared(this.camera.position) > this.EPS) {
                 // 保存相机当前位置
-               
+                this.lastPosition.copy(this.camera.position);
+            }
+        }
+        else if (this.camera instanceof OrthographicCamera) {
+            this.camera.lookAt(this.target);
+            if (this.lastPosition.distanceToSquared(this.camera.position) > this.EPS || this.lastZoom !== this.camera.zoom) {
+                this.lastPosition.copy(

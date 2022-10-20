@@ -579,4 +579,12 @@ export default class TrackCameraCtrl implements IDispose {
         // 更新相机当前的位置
         this.camera.position.addVectors(this.target, this._eye);
 
-      
+        if (this.camera instanceof PerspectiveCamera) {
+            // 检查相机的位置是否在minDistance和maxDistance之间
+            this.checkDistances();
+            // 从相机点看到目标点得到相机的模型矩阵
+            this.camera.lookAt(this.target);
+            // 当相机位置变化后，发送一个相机状态改变的事件
+            if (this.lastPosition.distanceToSquared(this.camera.position) > this.EPS) {
+                // 保存相机当前位置
+               

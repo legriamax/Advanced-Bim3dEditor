@@ -593,4 +593,21 @@ export default class TrackCameraCtrl implements IDispose {
         else if (this.camera instanceof OrthographicCamera) {
             this.camera.lookAt(this.target);
             if (this.lastPosition.distanceToSquared(this.camera.position) > this.EPS || this.lastZoom !== this.camera.zoom) {
-                this.lastPosition.copy(
+                this.lastPosition.copy(this.camera.position);
+                this.lastZoom = this.camera.zoom;
+            }
+        }
+        else {
+            console.warn('TrackCameraCtrl: undefine camera type');
+        }
+    };
+
+    reset(): void {
+
+        this._state = TCState.NONE;
+
+        this.target.copy(this.target0);
+        this.camera.position.copy(this.position0);
+        this.camera.up.copy(this.up0);
+
+       

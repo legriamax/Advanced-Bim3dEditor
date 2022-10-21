@@ -610,4 +610,17 @@ export default class TrackCameraCtrl implements IDispose {
         this.camera.position.copy(this.position0);
         this.camera.up.copy(this.up0);
 
-       
+        this.camera.zoom = this.zoom0;
+        this.camera.updateProjectionMatrix();
+
+        this._eye.subVectors(this.camera.position, this.target);
+
+        this.camera.lookAt(this.target);
+        this.lastPosition.copy(this.camera.position);
+        this.lastZoom = this.camera.zoom;
+
+    };
+
+
+    private onPointerDown(event: any): void {
+        if (this.enabled === false) retur

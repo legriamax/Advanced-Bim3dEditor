@@ -655,4 +655,11 @@ export default class TrackCameraCtrl implements IDispose {
 
     }
 
-    private onPoin
+    private onPointerUp(event: any): void {
+        // let meshc = (BIM.mgr[MgrDef.MESH_CONTROL_MGR] as MeshControlsMgr);
+        // if (this.enabled === false) {//zjj模型选中拖动状态
+        //     if (!(meshc && meshc.transformControls && meshc.transformControls.controldrag)) {
+        //         return;
+        //     }
+        // }
+        // BaseUtls.changeMouseStyle(MouseSty

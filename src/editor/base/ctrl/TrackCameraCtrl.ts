@@ -623,4 +623,16 @@ export default class TrackCameraCtrl implements IDispose {
 
 
     private onPointerDown(event: any): void {
-        if (this.enabled === false) retur
+        if (this.enabled === false) return;
+
+        if (this._pointers.length === 0) {
+
+            this.domElement.setPointerCapture(event.pointerId);
+            this.domElement.addEventListener('pointermove', this.pointer_move);
+            this.domElement.addEventListener('pointerup', this.pointer_up);
+        }
+
+        this.addPointer(event);
+
+        if (event.pointerType === 'touch') {
+            this.o

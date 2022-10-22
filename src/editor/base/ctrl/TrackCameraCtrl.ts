@@ -662,4 +662,18 @@ export default class TrackCameraCtrl implements IDispose {
         //         return;
         //     }
         // }
-        // BaseUtls.changeMouseStyle(MouseSty
+        // BaseUtls.changeMouseStyle(MouseStyle.DEDFAULT);
+
+        if (event.pointerType === 'touch') {
+            this.onTouchEnd(event);
+        }
+        else {
+            this.onMouseUp();
+        }
+
+        this.removePointer(event);
+
+        if (this._pointers.length === 0) {
+
+            this.domElement.releasePointerCapture(event.pointerId);
+            this.domElement.removeEventListen

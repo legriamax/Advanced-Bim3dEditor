@@ -711,4 +711,18 @@ export default class TrackCameraCtrl implements IDispose {
     //             break;
     //         case Keyboard.E:
     //             this.panCameraByKey(3);
-    /
+    //             break;
+    //         default:
+    //             needsUpdate = false;
+    //             break;
+    //     }
+    //     if (needsUpdate) {
+    //         event.preventDefault();
+    //         this.update()
+    //     }
+    // }
+
+    private keyup(): void {
+        if (this.enabled === false) return;
+        this._state = TCState.NONE;
+    

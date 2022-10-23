@@ -676,4 +676,18 @@ export default class TrackCameraCtrl implements IDispose {
         if (this._pointers.length === 0) {
 
             this.domElement.releasePointerCapture(event.pointerId);
-            this.domElement.removeEventListen
+            this.domElement.removeEventListener('pointermove', this.pointer_move);
+            this.domElement.removeEventListener('pointerup', this.pointer_up);
+        }
+
+        // BIM.ED.event(EventDef.CAMERA_TARGET_CHANGE, null);
+    }
+
+    private onPointerCancel(event: any): void {
+        this.removePointer(event);
+    }
+
+    // private keydown(event: any): void {
+    //     if (this.enabled === false) return;
+
+    //     

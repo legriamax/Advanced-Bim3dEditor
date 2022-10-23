@@ -690,4 +690,14 @@ export default class TrackCameraCtrl implements IDispose {
     // private keydown(event: any): void {
     //     if (this.enabled === false) return;
 
-    //     
+    //     let needsUpdate = true;
+    //     switch (event.keyCode) {
+    //         case Keyboard.W:
+    //             this.panCameraByKey(4);
+    //             break;
+    //         case Keyboard.S:
+    //             if (!event.ctrlKey) {
+    //                 this.panCameraByKey(5);
+    //             }
+    //             break;
+    //         case Key

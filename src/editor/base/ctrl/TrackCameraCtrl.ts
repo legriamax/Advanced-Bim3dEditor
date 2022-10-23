@@ -700,4 +700,15 @@ export default class TrackCameraCtrl implements IDispose {
     //                 this.panCameraByKey(5);
     //             }
     //             break;
-    //         case Key
+    //         case Keyboard.A:
+    //             this.panCameraByKey(0);
+    //             break;
+    //         case Keyboard.D:
+    //             this.panCameraByKey(1);
+    //             break;
+    //         case Keyboard.Q:
+    //             this.panCameraByKey(2);
+    //             break;
+    //         case Keyboard.E:
+    //             this.panCameraByKey(3);
+    /

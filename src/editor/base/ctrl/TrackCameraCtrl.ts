@@ -725,4 +725,16 @@ export default class TrackCameraCtrl implements IDispose {
     private keyup(): void {
         if (this.enabled === false) return;
         this._state = TCState.NONE;
-    
+    }
+
+    private onMouseDown(event: any): void {
+
+        switch (event.button) {
+            case this.mouseButtons.LEFT:
+                this._state = TCState.ROTATE;
+                break;
+            case this.mouseButtons.MIDDLE:
+                this._state = TCState.PAN;
+                break;
+            case this.mouseButtons.RIGHT:
+                thi

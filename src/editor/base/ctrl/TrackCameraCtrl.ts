@@ -737,4 +737,16 @@ export default class TrackCameraCtrl implements IDispose {
                 this._state = TCState.PAN;
                 break;
             case this.mouseButtons.RIGHT:
-                thi
+                this._state = TCState.PAN;
+                break;
+            default:
+                this._state = TCState.NONE;
+                break;
+        }
+
+        if (this._state === TCState.ROTATE && !this.noRotate) {
+            // 如果相机状态为旋转
+            // 将鼠标坐标转换成为以屏幕中心点为圆心，屏幕宽度一半为半径的园坐标
+            // 记录更新相机状态
+
+            this._moveCurr.copy(this.getMouseOnCircle(event.pageX, event.page

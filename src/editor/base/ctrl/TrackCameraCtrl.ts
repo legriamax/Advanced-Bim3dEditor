@@ -759,4 +759,15 @@ export default class TrackCameraCtrl implements IDispose {
             this._zoomStart.copy(this.getMouseOnScreen(event.pageX, event.pageY));
             this._zoomEnd.copy(this._zoomStart);
         }
-        else if (this._sta
+        else if (this._state === TCState.PAN && !this.noPan) {
+            // 将鼠标坐标转换为0，0~1，1之间并记录位置状态
+            this._panStart.copy(this.getMouseOnScreen(event.pageX, event.pageY));
+            this._panEnd.copy(this._panStart);
+        }
+
+        // BIM.ED.event(EventDef.CAMERA_TARGET_CHANGE, {});
+    }
+
+    private onMouseMove(event: any) {
+        // console.log("poin")
+        if (this._stat

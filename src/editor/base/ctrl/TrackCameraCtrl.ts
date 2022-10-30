@@ -770,4 +770,11 @@ export default class TrackCameraCtrl implements IDispose {
 
     private onMouseMove(event: any) {
         // console.log("poin")
-        if (this._stat
+        if (this._state === TCState.ROTATE && !this.noRotate) {
+            // BaseUtls.changeMouseStyle(MouseStyle.ROTATE);
+
+            this._movePrev.copy(this._moveCurr);
+            this._moveCurr.copy(this.getMouseOnCircle(event.pageX, event.pageY));
+
+            let center = this._meshCenter ? this._meshCenter : this.target;
+            // BIM.ED.event(EventDef.CAMERA_TARGET_CHANGE, cen

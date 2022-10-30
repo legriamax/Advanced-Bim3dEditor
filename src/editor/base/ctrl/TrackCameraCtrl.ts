@@ -749,4 +749,14 @@ export default class TrackCameraCtrl implements IDispose {
             // 将鼠标坐标转换成为以屏幕中心点为圆心，屏幕宽度一半为半径的园坐标
             // 记录更新相机状态
 
-            this._moveCurr.copy(this.getMouseOnCircle(event.pageX, event.page
+            this._moveCurr.copy(this.getMouseOnCircle(event.pageX, event.pageY));
+            this._movePrev.copy(this._moveCurr);
+        }
+        else if (this._state === TCState.ZOOM && !this.noZoom) {
+            // 如果相机状态为缩放，将鼠标坐标转换成(0, 0)~(1, 1)之间
+            // 屏幕左上角为0，0右下角为1，1
+            // 记录相机状态
+            this._zoomStart.copy(this.getMouseOnScreen(event.pageX, event.pageY));
+            this._zoomEnd.copy(this._zoomStart);
+        }
+        else if (this._sta

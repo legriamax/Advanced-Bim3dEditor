@@ -785,4 +785,17 @@ export default class TrackCameraCtrl implements IDispose {
         }
         else if (this._state === TCState.PAN && !this.noPan) {
             // BaseUtls.changeMouseStyle(MouseStyle.TRANSLATE);
-            this._
+            this._panEnd.copy(this.getMouseOnScreen(event.pageX, event.pageY));
+        }
+
+        if (this._state != TCState.NONE) {
+            this.update();
+        }
+    }
+
+    private zoomCameraByTarget(event: any): void {
+
+        var mX = (event.clientX / this.screen.width) * 2 - 1;
+        var mY = - (event.clientY / this.screen.height) * 2 + 1;
+
+        let v3 = new Vector3(

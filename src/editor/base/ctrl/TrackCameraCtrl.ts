@@ -777,4 +777,12 @@ export default class TrackCameraCtrl implements IDispose {
             this._moveCurr.copy(this.getMouseOnCircle(event.pageX, event.pageY));
 
             let center = this._meshCenter ? this._meshCenter : this.target;
-            // BIM.ED.event(EventDef.CAMERA_TARGET_CHANGE, cen
+            // BIM.ED.event(EventDef.CAMERA_TARGET_CHANGE, center);
+        }
+        else if (this._state === TCState.ZOOM && !this.noZoom) {
+            // BaseUtls.changeMouseStyle(MouseStyle.SCALE);
+            this._zoomEnd.copy(this.getMouseOnScreen(event.pageX, event.pageY));
+        }
+        else if (this._state === TCState.PAN && !this.noPan) {
+            // BaseUtls.changeMouseStyle(MouseStyle.TRANSLATE);
+            this._

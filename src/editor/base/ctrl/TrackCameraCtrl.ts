@@ -815,4 +815,19 @@ export default class TrackCameraCtrl implements IDispose {
 
     }
 
-    private
+    private onMouseUp(): void {
+        this._state = TCState.NONE;
+    }
+
+    private onMouseWheel(event: any): void {
+
+        if (this.enabled === false) return;
+        if (this.noZoom === true) return;
+        event.preventDefault();
+
+        // BaseUtls.changeMouseStyle(MouseStyle.SCALE);
+
+        switch (event.deltaMode) {
+            case 2:
+                // Zoom in pages
+         

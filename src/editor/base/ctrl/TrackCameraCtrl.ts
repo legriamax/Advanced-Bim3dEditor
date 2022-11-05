@@ -798,4 +798,21 @@ export default class TrackCameraCtrl implements IDispose {
         var mX = (event.clientX / this.screen.width) * 2 - 1;
         var mY = - (event.clientY / this.screen.height) * 2 + 1;
 
-        let v3 = new Vector3(
+        let v3 = new Vector3(mX, mY, 0.5);
+        v3.unproject(this.camera);
+
+        let factor = 3;
+        v3.sub(this.camera.position).setLength(factor);
+
+        if (event.deltaY < 0) {
+            this.camera.position.add(v3);
+            this.target.add(v3);
+        }
+        else {
+            this.camera.position.sub(v3);
+            this.target.sub(v3);
+        }
+
+    }
+
+    private

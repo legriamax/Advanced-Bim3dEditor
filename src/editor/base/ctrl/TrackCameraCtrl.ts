@@ -842,4 +842,17 @@ export default class TrackCameraCtrl implements IDispose {
                 break;
         }
 
-        t
+        this.zoomCameraByTarget(event)
+
+        this.update();
+
+        // BIM.ED.event(EventDef.CAMERA_CHANGE_FROM_WHEEL, true);
+
+        // BIM.timer.once(300, this, this.resetMouse);
+    }
+
+    private resetMouse(): void {
+
+        // BIM.timer.clear(this, this.resetMouse);
+        // BaseUtls.changeMouseStyle(MouseStyle.DEDFAULT);
+    }

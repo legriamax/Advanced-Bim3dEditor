@@ -830,4 +830,16 @@ export default class TrackCameraCtrl implements IDispose {
         switch (event.deltaMode) {
             case 2:
                 // Zoom in pages
-         
+                this._zoomStart.y -= event.deltaY * 0.025;
+                break;
+            case 1:
+                // Zoom in lines
+                this._zoomStart.y -= event.deltaY * 0.01;
+                break;
+            default:
+                // undefined, 0, assume pixels
+                this._zoomStart.y -= event.deltaY * 0.00025;
+                break;
+        }
+
+        t

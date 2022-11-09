@@ -856,3 +856,13 @@ export default class TrackCameraCtrl implements IDispose {
         // BIM.timer.clear(this, this.resetMouse);
         // BaseUtls.changeMouseStyle(MouseStyle.DEDFAULT);
     }
+
+    private onTouchStart(event: any): void {
+
+        this.trackPointer(event);
+
+        switch (this._pointers.length) {
+            case 1:
+                this._state = TCState.TOUCH_ROTATE;
+                this._moveCurr.copy(this.getMouseOnCircle(this._pointers[0].pageX, this._pointers[0].pageY));
+                this._movePrev.copy(thi

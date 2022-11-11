@@ -872,4 +872,16 @@ export default class TrackCameraCtrl implements IDispose {
                 this._state = TCState.TOUCH_ZOOM_PAN;
                 const dx = this._pointers[0].pageX - this._pointers[1].pageX;
                 const dy = this._pointers[0].pageY - this._pointers[1].pageY;
-                this._touchZoomDistanceEnd = this._touchZoomDistanceStart = Math.sqrt(d
+                this._touchZoomDistanceEnd = this._touchZoomDistanceStart = Math.sqrt(dx * dx + dy * dy);
+                const x = (this._pointers[0].pageX + this._pointers[1].pageX) / 2;
+                const y = (this._pointers[0].pageY + this._pointers[1].pageY) / 2;
+                this._panStart.copy(this.getMouseOnScreen(x, y));
+                this._panEnd.copy(this._panStart);
+                break;
+
+        }
+    }
+
+    private onTouchMove(event: any): void {
+
+        

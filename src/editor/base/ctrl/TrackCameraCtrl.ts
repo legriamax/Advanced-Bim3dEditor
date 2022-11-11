@@ -884,4 +884,17 @@ export default class TrackCameraCtrl implements IDispose {
 
     private onTouchMove(event: any): void {
 
-        
+        this.trackPointer(event);
+
+        switch (this._pointers.length) {
+
+            case 1:
+                this._movePrev.copy(this._moveCurr);
+
+                this._moveCurr.copy(this.getMouseOnCircle(event.pageX, event.pageY));
+
+                break;
+
+            default:
+                // 2 or more
+                const position = thi

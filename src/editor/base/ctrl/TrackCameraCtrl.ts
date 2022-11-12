@@ -897,4 +897,10 @@ export default class TrackCameraCtrl implements IDispose {
 
             default:
                 // 2 or more
-                const position = thi
+                const position = this.getSecondPointerPosition(event);
+                const dx = event.pageX - position.x;
+                const dy = event.pageY - position.y;
+                this._touchZoomDistanceEnd = Math.sqrt(dx * dx + dy * dy);
+                const x = (event.pageX + position.x) / 2;
+                const y = (event.pageY + position.y) / 2;
+                th

@@ -924,4 +924,18 @@ export default class TrackCameraCtrl implements IDispose {
                 this._state = TCState.TOUCH_ZOOM_PAN;
                 this._moveCurr.copy(this.getMouseOnCircle(event.pageX - this._movePrev.x, event.pageY - this._movePrev.y));
                 this._movePrev.copy(this._moveCurr);
-     
+                break;
+        }
+    }
+
+    private contextmenu(event: any): void {
+        if (this.enabled === false) return;
+        event.preventDefault();
+    }
+
+    private addPointer(event: any): void {
+        this._pointers.push(event);
+    }
+
+    private removePointer(event: any): void {
+        delete this._pointerPositions[event.pointerId];

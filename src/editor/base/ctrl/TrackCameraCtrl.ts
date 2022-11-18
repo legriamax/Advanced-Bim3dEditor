@@ -939,3 +939,15 @@ export default class TrackCameraCtrl implements IDispose {
 
     private removePointer(event: any): void {
         delete this._pointerPositions[event.pointerId];
+        for (let i = 0; i < this._pointers.length; i++) {
+            if (this._pointers[i].pointerId == event.pointerId) {
+                this._pointers.splice(i, 1);
+                return;
+            }
+        }
+    }
+
+    private trackPointer(event: any): void {
+        let position = this._pointerPositions[event.pointerId];
+        if (position === undefined) {
+    

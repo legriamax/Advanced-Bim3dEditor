@@ -958,4 +958,7 @@ export default class TrackCameraCtrl implements IDispose {
 
     private getSecondPointerPosition(event: any): any {
         const pointer = event.pointerId === this._pointers[0].pointerId ? this._pointers[1] : this._pointers[0];
-        return this._p
+        return this._pointerPositions[pointer.pointerId];
+    }
+
+}

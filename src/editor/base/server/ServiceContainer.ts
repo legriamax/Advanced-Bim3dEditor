@@ -54,4 +54,24 @@ export default class ServiceContainer {
      */
     get scheme(): ISchemeService {
         if (this._scheme == null) {
-            this._scheme = this.try
+            this._scheme = this.tryGetService(service.SCHEME_SERVICE);
+        }
+
+        return this._scheme;
+    }
+
+    /**
+     * 场景服务
+     */
+    get scene(): ISceneSrevice {
+        if (this._scene == null) {
+            this._scene = this.tryGetService(service.SCENE_SERVICE);
+        }
+
+        return this._scene;
+    }
+
+
+    /** 配模服务 */
+    get mesh(): IMeshService {
+        if (this._me

@@ -40,4 +40,18 @@ export default class ServiceContainer {
     }
 
     /**
-     * cad
+     * cad服务
+     */
+    get cad(): ICadService {
+        if (this._cad == null) {
+            this._cad = this.tryGetService(service.CAD_SERVICE);
+        }
+        return this._cad;
+    }
+
+    /**
+     * 方案版本服务
+     */
+    get scheme(): ISchemeService {
+        if (this._scheme == null) {
+            this._scheme = this.try

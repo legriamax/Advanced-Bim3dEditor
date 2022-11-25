@@ -74,4 +74,11 @@ export default class ServiceContainer {
 
     /** 配模服务 */
     get mesh(): IMeshService {
-        if (this._me
+        if (this._mesh == null) {
+            this._mesh = this.tryGetService(service.MESH_SERVICE);
+        }
+        return this._mesh;
+    }
+
+
+}

@@ -14,4 +14,13 @@ export class Event {
     /** 定义 click 事件对象的 type 属性值。*/
     static CLICK: string = "click";
     /** 定义 rightmousedown 事件对象的 type 属性值。*/
-    static RIGHT_MOUSE_DOWN: strin
+    static RIGHT_MOUSE_DOWN: string = "rightmousedown";
+    /** 定义 rightmouseup 事件对象的 type 属性值。*/
+    static RIGHT_MOUSE_UP: string = "rightmouseup";
+    /** 定义 rightclick 事件对象的 type 属性值。*/
+    static RIGHT_CLICK: string = "rightclick";
+    /** 定义 mousemove 事件对象的 type 属性值。*/
+    static MOUSE_MOVE: string = "mousemove";
+    /** 定义 mouseover 事件对象的 type 属性值。*/
+    static MOUSE_OVER: string = "mouseover";
+    /** 定义 mouseo

@@ -23,4 +23,13 @@ export class Event {
     static MOUSE_MOVE: string = "mousemove";
     /** 定义 mouseover 事件对象的 type 属性值。*/
     static MOUSE_OVER: string = "mouseover";
-    /** 定义 mouseo
+    /** 定义 mouseout 事件对象的 type 属性值。*/
+    static MOUSE_OUT: string = "mouseout";
+    /** 定义 mousewheel 事件对象的 type 属性值。*/
+    static MOUSE_WHEEL: string = "mousewheel";
+    /** 定义 mouseover 事件对象的 type 属性值。*/
+    static ROLL_OVER: string = "mouseover";
+    /** 定义 mouseout 事件对象的 type 属性值。*/
+    static ROLL_OUT: string = "mouseout";
+    /** 定义 doubleclick 事件对象的 type 属性值。*/
+    static DOUBLE_CLIC

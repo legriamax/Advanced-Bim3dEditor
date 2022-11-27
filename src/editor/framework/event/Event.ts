@@ -32,4 +32,13 @@ export class Event {
     /** 定义 mouseout 事件对象的 type 属性值。*/
     static ROLL_OUT: string = "mouseout";
     /** 定义 doubleclick 事件对象的 type 属性值。*/
-    static DOUBLE_CLIC
+    static DOUBLE_CLICK: string = "doubleclick";
+    /** 定义 change 事件对象的 type 属性值。*/
+    static CHANGE: string = "change";
+    /** 定义 changed 事件对象的 type 属性值。*/
+    static CHANGED: string = "changed";
+    /** 定义 resize 事件对象的 type 属性值。*/
+    static RESIZE: string = "resize";
+    /** 定义 added 事件对象的 type 属性值。*/
+    static ADDED: string = "added";
+    /** 定义 removed 事件对象的 type 属性

@@ -51,4 +51,14 @@ export class Event {
     static ERROR: string = "error";
     /** 定义 complete 事件对象的 type 属性值。*/
     static COMPLETE: string = "complete";
-    /** 定义 loaded 事件对
+    /** 定义 loaded 事件对象的 type 属性值。*/
+    static LOADED: string = "loaded";
+    /** 定义 loaded 事件对象的 type 属性值。*/
+    static READY: string = "ready";
+    /** 定义 progress 事件对象的 type 属性值。*/
+    static PROGRESS: string = "progress";
+    /** 定义 input 事件对象的 type 属性值。*/
+    static INPUT: string = "input";
+    /** 定义 render 事件对象的 type 属性值。*/
+    static RENDER: string = "render";
+    /** 定义 open 事

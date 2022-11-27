@@ -61,4 +61,14 @@ export class Event {
     static INPUT: string = "input";
     /** 定义 render 事件对象的 type 属性值。*/
     static RENDER: string = "render";
-    /** 定义 open 事
+    /** 定义 open 事件对象的 type 属性值。*/
+    static OPEN: string = "open";
+    /** 定义 message 事件对象的 type 属性值。*/
+    static MESSAGE: string = "message";
+    /** 定义 close 事件对象的 type 属性值。*/
+    static CLOSE: string = "close";
+    /** 定义 keydown 事件对象的 type 属性值。*/
+    static KEY_DOWN: string = "keydown";
+    /** 定义 keypress 事件对象的 type 属性值。*/
+    static KEY_PRESS: string = "keypress";
+ 

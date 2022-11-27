@@ -41,4 +41,14 @@ export class Event {
     static RESIZE: string = "resize";
     /** 定义 added 事件对象的 type 属性值。*/
     static ADDED: string = "added";
-    /** 定义 removed 事件对象的 type 属性
+    /** 定义 removed 事件对象的 type 属性值。*/
+    static REMOVED: string = "removed";
+    /** 定义 display 事件对象的 type 属性值。*/
+    static DISPLAY: string = "display";
+    /** 定义 undisplay 事件对象的 type 属性值。*/
+    static UNDISPLAY: string = "undisplay";
+    /** 定义 error 事件对象的 type 属性值。*/
+    static ERROR: string = "error";
+    /** 定义 complete 事件对象的 type 属性值。*/
+    static COMPLETE: string = "complete";
+    /** 定义 loaded 事件对

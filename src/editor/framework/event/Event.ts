@@ -71,4 +71,13 @@ export class Event {
     static KEY_DOWN: string = "keydown";
     /** 定义 keypress 事件对象的 type 属性值。*/
     static KEY_PRESS: string = "keypress";
- 
+    /** 定义 keyup 事件对象的 type 属性值。*/
+    static KEY_UP: string = "keyup";
+    /** 定义 frame 事件对象的 type 属性值。*/
+    static FRAME: string = "enterframe";
+    /** 定义 dragstart 事件对象的 type 属性值。*/
+    static DRAG_START: string = "dragstart";
+    /** 定义 dragmove 事件对象的 type 属性值。*/
+    static DRAG_MOVE: string = "dragmove";
+    /** 定义 dragend 事件对象的 type 属性值。*/
+    static DRAG_EN

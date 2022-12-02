@@ -90,4 +90,14 @@ export class Event {
     /** 定义 focus 事件对象的 type 属性值。*/
     static FOCUS: string = "focus";
     /** 定义 visibilitychange 事件对象的 type 属性值。*/
-    static VISIBILITY_C
+    static VISIBILITY_CHANGE: string = "visibilitychange";
+    /** 定义 focuschange 事件对象的 type 属性值。*/
+    static FOCUS_CHANGE: string = "focuschange";
+    /** 定义 played 事件对象的 type 属性值。*/
+    static PLAYED: string = "played";
+    /** 定义 paused 事件对象的 type 属性值。*/
+    static PAUSED: string = "paused";
+    /** 定义 stopped 事件对象的 type 属性值。*/
+    static STOPPED: string = "stopped";
+    /** 定义 start 事件对象的 type 属性值。*/
+    static START: string = "start";

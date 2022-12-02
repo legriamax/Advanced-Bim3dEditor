@@ -110,4 +110,14 @@ export class Event {
     /** 定义 released 事件对象的 type 属性值。*/
     static RELEASED: string = "released";
     /** 定义 link 事件对象的 type 属性值。*/
-    sta
+    static LINK: string = "link";
+    /** 定义 label 事件对象的 type 属性值。*/
+    static LABEL: string = "label";
+    /**浏览器全屏更改时触发*/
+    static FULL_SCREEN_CHANGE: string = "fullscreenchange";
+    /**显卡设备丢失时触发*/
+    static DEVICE_LOST: string = "devicelost";
+    /**世界矩阵更新时触发。*/
+    static TRANSFORM_CHANGED: string = "transformchanged";
+    /**更换动作时触发。*/
+    static ANIMAT

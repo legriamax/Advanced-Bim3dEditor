@@ -80,4 +80,14 @@ export class Event {
     /** 定义 dragmove 事件对象的 type 属性值。*/
     static DRAG_MOVE: string = "dragmove";
     /** 定义 dragend 事件对象的 type 属性值。*/
-    static DRAG_EN
+    static DRAG_END: string = "dragend";
+    /** 定义 enter 事件对象的 type 属性值。*/
+    static ENTER: string = "enter";
+    /** 定义 select 事件对象的 type 属性值。*/
+    static SELECT: string = "select";
+    /** 定义 blur 事件对象的 type 属性值。*/
+    static BLUR: string = "blur";
+    /** 定义 focus 事件对象的 type 属性值。*/
+    static FOCUS: string = "focus";
+    /** 定义 visibilitychange 事件对象的 type 属性值。*/
+    static VISIBILITY_C

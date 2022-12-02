@@ -101,3 +101,13 @@ export class Event {
     static STOPPED: string = "stopped";
     /** 定义 start 事件对象的 type 属性值。*/
     static START: string = "start";
+    /** 定义 end 事件对象的 type 属性值。*/
+    static END: string = "end";
+    /** 定义 componentadded 事件对象的 type 属性值。*/
+    static COMPONENT_ADDED: string = "componentadded";
+    /** 定义 componentremoved 事件对象的 type 属性值。*/
+    static COMPONENT_REMOVED: string = "componentremoved";
+    /** 定义 released 事件对象的 type 属性值。*/
+    static RELEASED: string = "released";
+    /** 定义 link 事件对象的 type 属性值。*/
+    sta

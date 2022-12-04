@@ -120,4 +120,16 @@ export class Event {
     /**世界矩阵更新时触发。*/
     static TRANSFORM_CHANGED: string = "transformchanged";
     /**更换动作时触发。*/
-    static ANIMAT
+    static ANIMATION_CHANGED: string = "animationchanged";
+    /**拖尾渲染节点改变时触发。*/
+    static TRAIL_FILTER_CHANGE: string = "trailfilterchange";
+    /**物理碰撞开始*/
+    static TRIGGER_ENTER: string = "triggerenter";
+    /**物理碰撞持续*/
+    static TRIGGER_STAY: string = "triggerstay";
+    /**物理碰撞结束*/
+    static TRIGGER_EXIT: string = "triggerexit";
+
+    /** 事件类型。*/
+    type: string;
+  

@@ -132,4 +132,24 @@ export class Event {
 
     /** 事件类型。*/
     type: string;
-  
+    /** 原生浏览器事件。*/
+    nativeEvent: any;
+    /** 事件目标触发对象。*/
+    target: Object3D;
+    /** 事件当前冒泡对象。*/
+    currentTarget: Object3D;
+    /** @internal */
+    _stoped: boolean;
+    /** 分配给触摸点的唯一标识号（作为 int）。*/
+    touchId: number;
+    /**键盘值*/
+    keyCode: number;
+    /**滚轮滑动增量*/
+    delta: number;
+
+    /**
+     * 设置事件数据。
+     * @param	type 事件类型。
+     * @param	currentTarget 事件目标触发对象。
+     * @param	target 事件当前冒泡对象。
+     * @return 返回当前 Even

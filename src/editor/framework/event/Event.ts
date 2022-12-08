@@ -152,4 +152,22 @@ export class Event {
      * @param	type 事件类型。
      * @param	currentTarget 事件目标触发对象。
      * @param	target 事件当前冒泡对象。
-     * @return 返回当前 Even
+     * @return 返回当前 Event 对象。
+     */
+    setTo(type: string, currentTarget: Object3D, target: Object3D): Event {
+        this.type = type;
+        this.currentTarget = currentTarget;
+        this.target = target;
+        return this;
+    }
+
+    /**
+     * 阻止对事件流中当前节点的后续节点中的所有事件侦听器进行处理。此方法不会影响当前节点 (currentTarget) 中的任何事件侦听器。
+     */
+    stopPropagation(): void {
+        this._stoped = true;
+    }
+
+  
+    /**
+     * 表示 A

@@ -170,4 +170,21 @@ export class Event {
 
   
     /**
-     * 表示 A
+     * 表示 Alt 键是处于活动状态 (true) 还是非活动状态 (false)。
+     */
+    get altKey(): boolean {
+        return this.nativeEvent.altKey;
+    }
+
+    /**
+     * 表示 Ctrl 键是处于活动状态 (true) 还是非活动状态 (false)。
+     */
+    get ctrlKey(): boolean {
+        return this.nativeEvent.ctrlKey;
+    }
+
+    /**
+     * 表示 Shift 键是处于活动状态 (true) 还是非活动状态 (false)。
+     */
+    get shiftKey(): boolean {
+ 

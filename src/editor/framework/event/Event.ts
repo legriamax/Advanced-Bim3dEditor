@@ -187,4 +187,16 @@ export class Event {
      * 表示 Shift 键是处于活动状态 (true) 还是非活动状态 (false)。
      */
     get shiftKey(): boolean {
- 
+        return this.nativeEvent.shiftKey;
+    }
+
+    /**
+     * 包含按下或释放的键的字符代码值。字符代码值为英文键盘值。
+     */
+    get charCode(): boolean {
+        return this.nativeEvent.charCode;
+    }
+
+    /**
+     * 表示键在键盘上的位置。这对于区分在键盘上多次出现的键非常有用。<br>
+     * 例如，您可以根据此属性的值来区分左 Shift 键和右 Shift 键：左 Shift 键的值为 KeyLocation.LEFT，右 Shift 键的值为 KeyLocation.RIGHT。另一个示例是区分标准键盘 (KeyLocation.STANDARD) 与数字键盘 (

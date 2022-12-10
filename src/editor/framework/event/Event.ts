@@ -199,4 +199,12 @@ export class Event {
 
     /**
      * 表示键在键盘上的位置。这对于区分在键盘上多次出现的键非常有用。<br>
-     * 例如，您可以根据此属性的值来区分左 Shift 键和右 Shift 键：左 Shift 键的值为 KeyLocation.LEFT，右 Shift 键的值为 KeyLocation.RIGHT。另一个示例是区分标准键盘 (KeyLocation.STANDARD) 与数字键盘 (
+     * 例如，您可以根据此属性的值来区分左 Shift 键和右 Shift 键：左 Shift 键的值为 KeyLocation.LEFT，右 Shift 键的值为 KeyLocation.RIGHT。另一个示例是区分标准键盘 (KeyLocation.STANDARD) 与数字键盘 (KeyLocation.NUM_PAD) 上按下的数字键。
+     */
+    get keyLocation(): number {
+        return this.nativeEvent.location || this.nativeEvent.keyLocation;
+    }
+
+    
+}
+

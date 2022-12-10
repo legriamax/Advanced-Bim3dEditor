@@ -212,3 +212,17 @@ class EventHandler extends Handler {
             EventHandler._pool.push(this.clear());
         }
     }
+
+	/**
+	 * 从对象池内创建一个Handler，默认会执行一次回收，如果不需要自动回收，设置once参数为false。
+	 * @param caller	执行域(this)。
+	 * @param method	回调方法。
+	 * @param args		（可选）携带的参数。
+	 * @param once		（可选）是否只执行一次，如果为true，回调后执行recover()进行回收，默认为true。
+	 * @return 返回创建的handler实例。
+	 */
+    static create(caller: any, method: Function, args: any[] = null, once: boolean = true): Handler {
+        if (EventHandler._pool.length) return EventHandler._pool.pop().setTo(caller, method, args, once);
+        return new EventHandler(caller, method, args, once);
+    }
+}

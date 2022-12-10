@@ -176,3 +176,34 @@ export class Keyboard {
     /** 与 Ctrl 的键控代码值 (17) 关联的常数。*/
     static CONTROL: number = 17;
     /** 与 Delete 的键控代码值 (46) 关联的常数。*/
+    static DELETE: number = 46;
+    /** 与 Enter 的键控代码值 (13) 关联的常数。*/
+    static ENTER: number = 13;
+    /** 与 Esc 的键控代码值 (27) 关联的常数。*/
+    static ESCAPE: number = 27;
+    /** 与 Page Up 的键控代码值 (33) 关联的常数。*/
+    static PAGE_UP: number = 33;
+    /** 与 Page Down 的键控代码值 (34) 关联的常数。*/
+    static PAGE_DOWN: number = 34;
+    /** 与 End 的键控代码值 (35) 关联的常数。*/
+    static END: number = 35;
+    /** 与 Home 的键控代码值 (36) 关联的常数。*/
+    static HOME: number = 36;
+    /** 与向左箭头键的键控代码值 (37) 关联的常数。*/
+    static LEFT: number = 37;
+    /** 与向上箭头键的键控代码值 (38) 关联的常数。*/
+    static UP: number = 38;
+    /** 与向右箭头键的键控代码值 (39) 关联的常数。*/
+    static RIGHT: number = 39;
+    /** 与向下箭头键的键控代码值 (40) 关联的常数。*/
+    static DOWN: number = 40;
+    /** 与 Shift 的键控代码值 (16) 关联的常数。*/
+    static SHIFT: number = 16;
+    /** 与空格键的键控代码值 (32) 关联的常数。*/
+    static SPACE: number = 32;
+    /** 与 Tab 的键控代码值 (9) 关联的常数。*/
+    static TAB: number = 9;
+    /** 与 Insert 的键控代码值 (45) 关联的常数。*/
+    static INSERT: number = 45;
+}
+

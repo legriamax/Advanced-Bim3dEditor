@@ -7,4 +7,10 @@ import BIM from './editor/BIM';
 
 new BIM().startUp();
 
-ReactDOM.createRoot(do
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <HashRouter>
+      <App/>
+    </HashRouter>
+  </React.StrictMode>
+)

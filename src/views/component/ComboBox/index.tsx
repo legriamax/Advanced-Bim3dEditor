@@ -12,4 +12,26 @@ const Container = styled.div<{pleft?:string}>`
     background-color: rgb(38, 38, 38);
     box-shadow: 0 0 3px rgb(102, 102, 102);
     text-align: left;
-    line
+    line-height: 40px;
+    transition-duration: 300ms;
+    z-index: 1000;
+    color: #ccc;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+`
+
+const MenuItem = styled.li`
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    left: 0;
+    top: 0;
+    &:hover {
+        color: #fff;
+        background-color: rgb(242, 112, 19);
+    }
+`
+const LabelIt

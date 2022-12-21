@@ -47,4 +47,17 @@ const ComboBox = (props: any) => {
                     {
                         props.menus.map((data) => {
                             return (
-                                <MenuItem key={data.ke
+                                <MenuItem key={data.key}>
+                                    <LabelItem>{data.label}</LabelItem>
+                                </MenuItem>
+                            )
+                        })
+                    }
+                </ul>
+
+            </Container>
+        </>
+    )
+}
+
+export default ComboBox;

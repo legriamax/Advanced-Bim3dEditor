@@ -23,3 +23,24 @@ const TitleBox = styled.div`
 `
 const TitleLabel = styled.span`
     color: #ccc;
+    font-size: 24px;
+
+`
+const InfoBox = styled.div`
+    width: 100%;
+    min-height: 100px;
+    color:  #ccc;
+
+`
+
+const PopPanel = (props: any) => {
+
+    const title = useRef(null);
+    // 拖动
+    const mousedown = (evt: any) => {
+
+        var parent: any = title.current.parentElement;
+
+        //鼠标按下时面板左上角的位置
+        var pl = parent.offsetLeft;
+    

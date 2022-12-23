@@ -53,4 +53,16 @@ const PopPanel = (props: any) => {
             var t = evt.clientY - e1.clientY;
             //防止鼠标点击与拖拽冲突
             var d = Math.sqrt(l * l + t * t);
-            if (d > 
+            if (d > 7) {
+                parent.style.left = pl - l + "px";
+                parent.style.top = pt - t + "px";
+            }
+            else {
+                parent.style.left = parent.offsetLeft;
+                parent.style.top = parent.offsetTop;
+            }
+        };
+
+        document.onmouseup = (e) => {
+            document.onmousemove = null;
+         

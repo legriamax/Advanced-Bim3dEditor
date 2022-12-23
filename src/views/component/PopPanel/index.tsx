@@ -43,4 +43,14 @@ const PopPanel = (props: any) => {
 
         //鼠标按下时面板左上角的位置
         var pl = parent.offsetLeft;
-    
+        var pt = parent.offsetTop;
+
+        document.onmousemove = (e1) => {
+            //鼠标变成十字架
+            // document.documentElement.style.cursor = "move";
+            //鼠标移动的距离
+            var l = evt.clientX - e1.clientX;
+            var t = evt.clientY - e1.clientY;
+            //防止鼠标点击与拖拽冲突
+            var d = Math.sqrt(l * l + t * t);
+            if (d > 

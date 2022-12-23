@@ -65,4 +65,16 @@ const PopPanel = (props: any) => {
 
         document.onmouseup = (e) => {
             document.onmousemove = null;
-         
+            document.onmouseup = null;
+            // document.documentElement.style.cursor = "";//恢复鼠标样式
+        };
+    }
+
+    return (
+        <>
+            <Container ref={title}>
+                <LayoutBox>
+                    <TitleBox onMouseDown={(e)=>mousedown(e)}>
+                        <TitleLabel>{props.title}</TitleLabel>
+                    </TitleBox>
+ 

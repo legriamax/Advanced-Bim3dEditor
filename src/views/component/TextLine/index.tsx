@@ -22,4 +22,9 @@ const TextLine = (props:any) => {
     <OrderDiv>
         <span className="line"></span>
         <span className="txt">{props.label}</span>
-        <span className="line"
+        <span className="line"></span>
+    </OrderDiv>
+  )
+}
+
+export default TextLine

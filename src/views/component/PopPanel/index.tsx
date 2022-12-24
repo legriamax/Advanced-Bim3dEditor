@@ -77,4 +77,13 @@ const PopPanel = (props: any) => {
                     <TitleBox onMouseDown={(e)=>mousedown(e)}>
                         <TitleLabel>{props.title}</TitleLabel>
                     </TitleBox>
- 
+                    <InfoBox>
+                        {props.children}
+                    </InfoBox>
+                </LayoutBox>
+            </Container>
+        </>
+    )
+}
+
+export default PopPanel

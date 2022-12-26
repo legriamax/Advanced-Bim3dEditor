@@ -44,4 +44,20 @@ const TextParagraphIcon = styled(TextParagraph)`
 const leftMenu = [
     { id: 'sd1', label: "结构", icon: <Building2Icon size='20' /> },
     { id: 'sd2', label: "材质", icon: <ImageEditIcon size='20' /> },
-    { id: 'sd3', label: "模型", icon: <MoleculeIcon size='20' 
+    { id: 'sd3', label: "模型", icon: <MoleculeIcon size='20' /> },
+    { id: 'sd4', label: "图纸", icon: <TextParagraphIcon size='20' /> }
+];
+
+const SideBar = () => {
+
+    const itemClick = (data:any)=>{
+        console.log('dd');
+    }
+
+    return (
+        <>
+            <SideBarBox>
+                {
+                    leftMenu.map((data) => {
+                        return (
+                            <LeftMenuItem key={data.id} on

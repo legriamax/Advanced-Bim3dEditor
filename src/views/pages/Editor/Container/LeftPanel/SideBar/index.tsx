@@ -28,4 +28,20 @@ const Building2Icon = styled(Building2)`
     color: white;
 
 `
-const ImageEditIcon = st
+const ImageEditIcon = styled(ImageEdit)`
+    color: white;
+
+`
+const MoleculeIcon = styled(Molecule)`
+    color: white;
+
+`
+const TextParagraphIcon = styled(TextParagraph)`
+    color: white;
+
+`
+
+const leftMenu = [
+    { id: 'sd1', label: "结构", icon: <Building2Icon size='20' /> },
+    { id: 'sd2', label: "材质", icon: <ImageEditIcon size='20' /> },
+    { id: 'sd3', label: "模型", icon: <MoleculeIcon size='20' 

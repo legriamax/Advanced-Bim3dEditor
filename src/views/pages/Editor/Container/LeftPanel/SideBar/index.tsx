@@ -60,4 +60,16 @@ const SideBar = () => {
                 {
                     leftMenu.map((data) => {
                         return (
-                            <LeftMenuItem key={data.id} on
+                            <LeftMenuItem key={data.id} onClick={(data)=>itemClick(data)}>
+                                {data.icon}
+                                {data.label}
+                            </LeftMenuItem>
+                        )
+                    })
+                }
+            </SideBarBox>
+        </>
+    )
+}
+
+export default SideBar

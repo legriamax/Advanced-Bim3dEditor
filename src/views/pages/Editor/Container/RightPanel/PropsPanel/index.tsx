@@ -18,4 +18,22 @@ const PropsPanelBox = styled.div`
 
 const PropsBox = styled.div`
     display: flex;
-    flex-dire
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+`
+
+const PropsPanel = () => {
+  return (
+    <>
+        <PropsPanelBox>
+            <PropsBox>
+                <TitleItem label='属性'/>
+            </PropsBox>
+        </PropsPanelBox>
+    </>
+  )
+}
+
+export default PropsPanel

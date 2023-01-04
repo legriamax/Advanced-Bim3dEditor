@@ -18,4 +18,20 @@ const EditorDiv = styled.div`
 
 class Editor extends React.Component {
 
-    container = React.createRef<HTMLDivEl
+    container = React.createRef<HTMLDivElement>();
+
+    editorview = React.createRef<HTMLDivElement>();
+
+    componentDidMount(): void {
+        console.log("editor mount")
+
+        if (this.container) {
+            BIM.container = this.container.current;
+            BIM.SC.scene.mountedMainScene();
+        }
+        if(this.editorview){
+            BIM.uicontainer = this.editorview.current;
+        }
+    }
+
+    componentWillUnmoun

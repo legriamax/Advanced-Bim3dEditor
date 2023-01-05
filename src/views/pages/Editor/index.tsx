@@ -34,4 +34,22 @@ class Editor extends React.Component {
         }
     }
 
-    componentWillUnmoun
+    componentWillUnmount(): void {
+        console.log("editor unmount")
+        // BIM.exit();
+    }
+
+    render(): React.ReactNode {
+        return (
+            <>
+                <div id='bim' ref={this.container} />
+                {/* <EditorDiv ref={this.editorview}> */}
+                    <Container />
+                {/* </EditorDiv> */}
+
+            </>
+        )
+    }
+}
+
+export default Editor

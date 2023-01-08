@@ -28,4 +28,14 @@ const BlueSketch = styled(Sketch)`
 
 const Logo = (props:any) => {
   return (
- 
+    <>
+      <LogoBox {...props}>
+        <BlueSketch title='Sketch Icon' size='32' />
+        <span>Bim3dEditor</span>
+      </LogoBox>
+
+    </>
+  )
+}
+
+export default Logo

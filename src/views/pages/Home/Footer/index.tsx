@@ -13,4 +13,13 @@ const FooterBox = styled.div`
 `
 
 const Footer: React.FC = ()=> {
- 
+  return (
+    <>
+        <FooterBox>
+
+        </FooterBox>
+    </>
+  )
+}
+
+export default Footer

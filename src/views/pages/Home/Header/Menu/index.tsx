@@ -41,4 +41,17 @@ const MenuButton = styled.button`
     }
     &::before {
         top: 0;
-        lef
+        left: 0;
+    }
+    &:hover::before, &:hover::after {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover::before{
+        border-top-color: rgb(242, 112, 19);
+        border-right-color: rgb(242, 112, 19);
+        transition: width 0.1s ease-out, height 0.1s ease-out 0.1s;
+    }
+    &:hover::after {
+        border-bottom-color: rgb(242, 112, 19);
+        

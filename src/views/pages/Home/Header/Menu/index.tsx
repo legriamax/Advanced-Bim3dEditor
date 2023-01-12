@@ -20,4 +20,25 @@ const MenuButton = styled.button`
     color: white;
     /* font-weight: bold; */
     position: relative;
-    outline
+    outline: none;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    &:hover{
+        color: rgb(242, 112, 19);
+    }
+    &::before, &::after{
+        box-sizing: inherit;
+        position: absolute;
+        content: '';
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;  
+    }
+    &::after{
+        bottom: 0;
+        right: 0;
+    }
+    &::before {
+        top: 0;
+        lef

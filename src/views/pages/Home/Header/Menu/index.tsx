@@ -66,4 +66,25 @@ const LoginBtn = styled.button`
     height: 32px;
     margin: 0 20px;
     border-radius: 6px;
-    background: rgb(242, 112, 
+    background: rgb(242, 112, 19);
+    &:hover{
+        background: rgb(248, 140, 64);
+    }
+`;
+
+const menudata = [
+    { id: "6", lable: '登录' },
+    { id: "5", lable: '编辑器' },
+    { id: "4", lable: '示例' },
+    { id: "3", lable: '文档' },
+    { id: "2", lable: '教程' },
+    { id: "1", lable: 'theme'}
+];
+
+const Menu: React.FC = () => {
+
+    let navigate = useNavigate();
+
+    const dealEditor = ()=>{
+      
+        navigate('/ed

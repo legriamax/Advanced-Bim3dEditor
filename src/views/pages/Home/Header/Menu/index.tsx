@@ -87,4 +87,19 @@ const Menu: React.FC = () => {
 
     const dealEditor = ()=>{
       
-        navigate('/ed
+        navigate('/editor');
+    }
+
+    const dispatch = useDispatch();
+    function changeTheme(){
+        dispatch(toggleTheme())
+    }
+
+    const menuClick = (e: React.MouseEvent) => {
+        let label = (e.target as any).innerHTML;
+        switch (label) {
+            case '教程':
+                navigate('/course')
+                break;
+            case '文档':
+                navigate('/docume

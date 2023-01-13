@@ -102,4 +102,25 @@ const Menu: React.FC = () => {
                 navigate('/course')
                 break;
             case '文档':
-                navigate('/docume
+                navigate('/document')
+                break
+            case '示例':
+                navigate('/example')
+                break;
+            case '编辑器':
+                dealEditor();
+                break;
+            case 'theme':
+                changeTheme();
+                break;
+            default:
+                break;
+        }
+    }
+
+    const loginClick = () => {
+        navigate('/login')
+    };
+
+    return (
+     

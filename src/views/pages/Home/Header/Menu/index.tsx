@@ -54,4 +54,16 @@ const MenuButton = styled.button`
     }
     &:hover::after {
         border-bottom-color: rgb(242, 112, 19);
-        
+        border-left-color: rgb(242, 112, 19);
+        transition: border-color 0s ease-out 0.3s, width 0.1s ease-out 0.3s, height 0.1s ease-out 0.5s;
+    }
+`;
+
+const LoginBtn = styled.button`
+    border: 0;
+    color: ${props=>props.theme.colors.body};
+    width: 84px;
+    height: 32px;
+    margin: 0 20px;
+    border-radius: 6px;
+    background: rgb(242, 112, 

@@ -123,4 +123,13 @@ const Menu: React.FC = () => {
     };
 
     return (
-     
+        <>
+            <MenuBox>
+                {
+                    menudata.map(data => {
+                        if (parseInt(data.id) === menudata.length) {
+                            return <LoginBtn key={data.id} onClick={loginClick}>登 录</LoginBtn>
+                        }
+                        else {
+                            return <MenuButton key={data.id} onClick={(e) => menuClick(e)}>{data.lable}</MenuButton>
+ 

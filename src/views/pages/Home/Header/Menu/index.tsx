@@ -132,4 +132,12 @@ const Menu: React.FC = () => {
                         }
                         else {
                             return <MenuButton key={data.id} onClick={(e) => menuClick(e)}>{data.lable}</MenuButton>
- 
+                        }
+                    })
+                }
+            </MenuBox>
+        </>
+    )
+};
+
+export default Menu;

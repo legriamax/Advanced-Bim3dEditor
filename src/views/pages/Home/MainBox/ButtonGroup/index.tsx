@@ -23,4 +23,22 @@ const BorderButton = styled.button`
 
     &:hover{
         color: rgb(179, 78, 6);
-      
+        border: 1px solid rgb(179, 78, 6);
+    }
+`
+
+const NormalButton = styled.button`
+    width: 140px;
+    height: 32px;
+    color: white;
+    background: rgb(242, 112, 19);
+    font-size: 16px;
+    text-align: center;
+    margin: 0 20px;
+    border: 0;
+    border-radius: 5px 5px;
+    &:hover{
+        background: rgb(179, 78, 6);
+    }
+`
+const Vie

@@ -41,4 +41,20 @@ const NormalButton = styled.button`
         background: rgb(179, 78, 6);
     }
 `
-const Vie
+const ViewInArIcon = styled(ViewInAr)`
+    color: white;
+    margin-right: 10px;
+    padding-bottom: 2px;
+`
+
+const ButtonGroup: React.FC = () => {
+
+    let navigate = useNavigate();
+    function gotoEditor() {
+        navigate('/editor')
+    }
+
+    return (
+        <>
+            <ButtonBox>
+                <a href="https://gitee.com/songmy1093697597/bim3d-editor" target="_blank

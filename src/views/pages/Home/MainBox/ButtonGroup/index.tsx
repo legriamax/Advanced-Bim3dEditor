@@ -57,4 +57,16 @@ const ButtonGroup: React.FC = () => {
     return (
         <>
             <ButtonBox>
-                <a href="https://gitee.com/songmy1093697597/bim3d-editor" target="_blank
+                <a href="https://gitee.com/songmy1093697597/bim3d-editor" target="_blank">
+                    <BorderButton>导出项目</BorderButton>
+                </a>
+                <NormalButton onClick={gotoEditor}>
+                    <ViewInArIcon size='16' />
+                    预览编辑
+                </NormalButton>
+            </ButtonBox>
+        </>
+    )
+}
+
+export default ButtonGroup

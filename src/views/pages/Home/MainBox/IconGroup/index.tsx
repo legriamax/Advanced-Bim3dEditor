@@ -43,4 +43,16 @@ const TypescriptIcon = styled(Typescript)`
   background-color: rgb(51, 51, 51);
 `
 const GiteeIcon = styled(Gitee)`
-  col
+  color: #f74141;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+`
+
+const IconGroup:React.FC = () => {
+    return (
+        <>
+            <IconGroupBox>
+                <ReactLogoIcon title='React icon' size='36'></ReactLogoIcon>
+                <ThreedotjsIcon title='Three.js icon' size='36'></ThreedotjsIcon>
+                <Typescrip

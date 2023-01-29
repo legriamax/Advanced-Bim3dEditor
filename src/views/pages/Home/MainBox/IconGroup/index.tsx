@@ -5,4 +5,23 @@ import { Threedotjs } from '@styled-icons/simple-icons/Threedotjs'
 import { Typescript } from '@styled-icons/simple-icons/Typescript'
 import { Javascript } from '@styled-icons/fluentui-system-filled/Javascript'
 import {Gitee} from '@styled-icons/simple-icons/Gitee'
-import styled from 'styled-compon
+import styled from 'styled-components'
+
+const IconGroupBox = styled.div`
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`
+
+const GithubIcon = styled(Github)`
+  color: white;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+`
+
+const ReactLogoIcon = styled(ReactLogo)`
+  color: #38d2f8;
+  margin: 0 

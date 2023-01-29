@@ -24,4 +24,23 @@ const GithubIcon = styled(Github)`
 
 const ReactLogoIcon = styled(ReactLogo)`
   color: #38d2f8;
-  margin: 0 
+  margin: 0 5px;
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+`
+
+const ThreedotjsIcon = styled(Threedotjs)`
+  color: white;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+`
+
+const TypescriptIcon = styled(Typescript)`
+  color: #067ceb;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: rgb(51, 51, 51);
+`
+const GiteeIcon = styled(Gitee)`
+  col

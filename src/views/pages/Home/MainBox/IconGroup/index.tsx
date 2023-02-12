@@ -55,4 +55,12 @@ const IconGroup:React.FC = () => {
             <IconGroupBox>
                 <ReactLogoIcon title='React icon' size='36'></ReactLogoIcon>
                 <ThreedotjsIcon title='Three.js icon' size='36'></ThreedotjsIcon>
-                <Typescrip
+                <TypescriptIcon title='Typescript icon' size='36'></TypescriptIcon>
+                <GiteeIcon title='Javascript icon' size='36'></GiteeIcon>
+                <GithubIcon title='Github icon' size='36'></GithubIcon>
+            </IconGroupBox>
+        </>
+    )
+}
+
+export default IconGroup

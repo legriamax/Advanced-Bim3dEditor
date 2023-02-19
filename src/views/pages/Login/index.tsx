@@ -19,4 +19,9 @@ const Login = () => {
         <Header></Header>
         <Main></Main>
         <Footer></Footer>
-      </La
+      </LayoutBox>
+    </>
+  )
+}
+
+export default Login

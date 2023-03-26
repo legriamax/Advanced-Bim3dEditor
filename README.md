@@ -8,4 +8,8 @@
 
 - [_React_](https://reactjs.org) is a popular free open-source frontend JavaScript library used for swiftly building user interfaces based on UI components.
 
-- [_Material UI_](https://mui.c
+- [_Material UI_](https://mui.com/material-ui/getting-started/overview/) is a comprehensive component library for constructing Google's system style [Material Design](https://material.io/design/introduction/).
+
+- [_Turf.js_](https://turfjs.org/) is a geospatial analysis library that handles various map algorithms, processing GeoJSON using highly readable JavaScript functions.
+
+Project previe

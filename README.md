@@ -4,4 +4,8 @@
 
 **Advanced-Bim3d Editor** leverages the popular frontend library React and the superior WebGL library Three.js to create an online, editable CAD analysis editor and free 3D modeling functionality. It has built-in support and cases for smart city, digital twinning, smart home decoration, web games, industrial display, and other related 3D rendering projects.
 
-- [_Three.js_](https://thr
+- [_Three.js_](https://threejs.org) is a cross-browser JavaScript library and Application Programming Interface (API) used to create and display animated 3D computer graphics within a web browser using WebGL.
+
+- [_React_](https://reactjs.org) is a popular free open-source frontend JavaScript library used for swiftly building user interfaces based on UI components.
+
+- [_Material UI_](https://mui.c

@@ -12,4 +12,26 @@
 
 - [_Turf.js_](https://turfjs.org/) is a geospatial analysis library that handles various map algorithms, processing GeoJSON using highly readable JavaScript functions.
 
-Project previe
+Project preview address: https://legriamax.github.io/advanced-bim3d-editor/
+
+## Installation
+
+### Advanced-Bim3d Editor
+
+The Advanced-Bim3dEditor uses WebGL to display one-stop editable 3D projects in a web browser. It currently supports download and editing.
+
+**npm:**
+
+```sh
+npm install
+npm run dev
+```
+
+**yarn:**
+
+```sh
+yarn
+yarn dev
+```
+
+## Getting started with Advanced-Bim3d-E

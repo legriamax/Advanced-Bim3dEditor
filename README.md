@@ -34,4 +34,15 @@ yarn
 yarn dev
 ```
 
-## Getting started with Advanced-Bim3d-E
+## Getting started with Advanced-Bim3d-Editor
+
+Assuming that you have cloned this repository, you can start with `main.tsx`:
+
+```jsx
+import App from '@/views/App';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+import '@/assets/style/index.css';
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).re

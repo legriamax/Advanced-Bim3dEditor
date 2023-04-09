@@ -45,4 +45,17 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import '@/assets/style/index.css';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).re
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <HashRouter>
+      <App/>
+    </HashRouter>
+  </React.StrictMode>
+)
+```
+
+The project is still in the development version. Please star and fork the project for more details. You may also visit the preview address: https://legriamax.github.io/advanced-bim3d-editor/ to view the latest progress.
+
+## Contributing
+
+Go through the [contributing guide](/README.md) to und

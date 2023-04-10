@@ -58,4 +58,10 @@ The project is still in the development version. Please star and fork the projec
 
 ## Contributing
 
-Go through the [contributing guide](/README.md) to und
+Go through the [contributing guide](/README.md) to understand our development process, how to propose bug fixes and improvements, and how to build and test your changes.
+
+Contributing to Advanced Bim3dEditor Core involves more than just issues and pull requests. There are several other ways to support Advanced Bim3dEditor beyond contributing to the codebase.
+
+## License
+
+This project is licensed according to the [MIT license](/LICENSE).
